@@ -1,0 +1,8 @@
+<p>
+  Server with ID {{ serverId }} is: {{ getServerStatus() }}. Server
+  {{
+    getServerHaType()
+      ? "is on High-availability cluster"
+      : "isn't on High-availability cluster"
+  }}
+</p>
