@@ -1,13 +1,5 @@
-<!-- Property Binding: typically used to change html properties or component directives -->
-<p>Property Binding:</p>
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
-<!--Data Binding -->
-<p>String Interpolation:</p>
-<p>{{ allowNewServer }}</p>
-<!-- String interpolation: typically used to print something on the template -->
-
-<!-- Sintassi: NON mischiare il Property Binding con la String Interpolation (es. [disabled]="{{!allowNewServer}}" -> NON Funzionerebbe ). E' invece necessario scrivere codice Typescript (expression) che restituisca il valore atteso da questa property -->
-<p>innerText injection througth Property Binding:</p>
-<p [innerText]="allowNewServer"></p>
+<!-- Event Binding -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<p>{{ serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
