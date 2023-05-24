@@ -1,5 +1,15 @@
-<!-- Event Binding -->
-<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
-<p>{{ serverCreationStatus}}</p>
+<label for="">Server name</label>
+<!-- (input): ascoltiamo evento DOM fornito dall'elemento input | ($event): mediante questo nome di variabile "riservato" (nel template quando si usa l'event binding),passiamo (catturiamo) l'evento (oggetto) al metodo invocato (ad ogni evento, in questo caso pressione di tasto nel campo input) onUpdateServerName(). NB. $event funzionerà solamente se inserito tra le "" -->
+<!-- Per riassumere: ($event) è parola riservata che ci da accesso ai dati dell'evento -->
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+<p>{{ serverName }}</p>
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+  Add Server
+</button>
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
