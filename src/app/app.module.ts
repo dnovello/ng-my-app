@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-//34. Challenge: Practicing Databinding. To run [(ngModel)] I need to import "FormsModule" and import below into array "imports"
 import { FormsModule } from '@angular/forms';
 // import { HttpClientModule } from '@angular/common/http';
 

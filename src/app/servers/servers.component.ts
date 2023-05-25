@@ -9,22 +9,21 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
   serverName = '';
-
- 
+  //37. Directives: Using ngIf to Output Data Conditionally
+  serverCreated = false;
 
   constructor() {
     setTimeout(() => (this.allowNewServer = true), 2000);
   }
   ngOnInit() {}
 
-  //34. Combining all forms of Databinding: concatenate with serverName value come from "[(ngModel)]" template directive.
   onCreateServer() {
+    //37. Directives: Using ngIf to Output Data Conditionally
+    this.serverCreated = true;
     this.serverCreationStatus =
       'Server created! The name is: ' + this.serverName;
   }
-  //31.Passing and Using Data with Event Binding
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
- 
 }
