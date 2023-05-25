@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
-  //34. Combining all forms of Databinding: clear default value
   serverName = '';
+
+ 
 
   constructor() {
     setTimeout(() => (this.allowNewServer = true), 2000);
@@ -25,4 +26,5 @@ export class ServersComponent implements OnInit {
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
+ 
 }

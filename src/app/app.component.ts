@@ -4,17 +4,15 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  /* styles: [
-    `
-      h3 {
-        color: purple;
-      }
-      p {
-        font-style: italic;
-        font-size: 2rem;
-        color: blue;
-      }
-    `,
-  ], */
 })
-export class AppComponent {}
+export class AppComponent {
+  //34. Challenge: Practicing Databinding
+  username = '';
+
+  //Il tutor ha usato un'espressione direttamente applicata all'evento:
+  //(click)="username = ''"
+  //anzichè
+  onResetUsername() {
+    this.username = '';
+  }
+}

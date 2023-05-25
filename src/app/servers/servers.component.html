@@ -1,10 +1,8 @@
-<label for="">Server name</label>
+<label>Server name</label>
 <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" /> -->
 
 <!-- 34. Combining all forms of Databinding:  -->
 <input type="text" class="form-control" [(ngModel)]="serverName" />
-
-<!-- <p>{{ serverName }}</p> -->
 
 <button
   class="btn btn-primary"
@@ -14,5 +12,9 @@
   Add Server
 </button>
 <p>{{ serverCreationStatus }}</p>
+
+<hr />
+
+
 <app-server></app-server>
 <app-server></app-server>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-//33. Two way Databinding: import FormsModule
+//34. Challenge: Practicing Databinding. To run [(ngModel)] I need to import "FormsModule" and import below into array "imports"
 import { FormsModule } from '@angular/forms';
 // import { HttpClientModule } from '@angular/common/http';
 
@@ -18,7 +18,7 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
     SuccessAlertComponent,
     WarningAlertComponent,
   ],
-  //33. Two way Databinding: add to imports array "FormModule" to use it
+  //34. Challenge: Practicing Databinding. Add to imports array "FormModule" first to use it.
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
