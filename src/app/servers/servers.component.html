@@ -1,7 +1,4 @@
 <label>Server name</label>
-<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" /> -->
-
-<!-- 34. Combining all forms of Databinding:  -->
 <input type="text" class="form-control" [(ngModel)]="serverName" />
 
 <button
@@ -11,11 +8,14 @@
 >
   Add Server
 </button>
-<!-- <p>{{ serverCreationStatus }}</p> -->
-<!-- 37. Directives: Using ngIf to Output Data Conditionally -->
-<p *ngIf="serverCreated">
+
+<p *ngIf="serverCreated; else noServerCreated">
   Server was created, server name is: {{ serverName }}
 </p>
+<!-- 38. Enhancing ngIf with an Else Condition: Else condition can be implements creating a new tag "ng-template" and join it to a marker "#noServerCreated", plugged in to *ngIf paragraph -->
+<ng-template #noServerCreated
+  ><p>No one server was created yet...</p></ng-template
+>
 
 <hr />
 

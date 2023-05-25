@@ -9,7 +9,6 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
   serverName = '';
-  //37. Directives: Using ngIf to Output Data Conditionally
   serverCreated = false;
 
   constructor() {
@@ -18,7 +17,6 @@ export class ServersComponent implements OnInit {
   ngOnInit() {}
 
   onCreateServer() {
-    //37. Directives: Using ngIf to Output Data Conditionally
     this.serverCreated = true;
     this.serverCreationStatus =
       'Server created! The name is: ' + this.serverName;
