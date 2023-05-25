@@ -12,7 +12,7 @@
 <p *ngIf="serverCreated; else noServerCreated">
   Server was created, server name is: {{ serverName }}
 </p>
-<!-- 38. Enhancing ngIf with an Else Condition: Else condition can be implements creating a new tag "ng-template" and join it to a marker "#noServerCreated", plugged in to *ngIf paragraph -->
+
 <ng-template #noServerCreated
   ><p>No one server was created yet...</p></ng-template
 >
