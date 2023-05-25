@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-// import { FormsModule } from '@angular/forms';
+//33. Two way Databinding: import FormsModule
+import { FormsModule } from '@angular/forms';
 // import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -17,7 +18,8 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
     SuccessAlertComponent,
     WarningAlertComponent,
   ],
-  imports: [BrowserModule],
+  //33. Two way Databinding: add to imports array "FormModule" to use it
+  imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

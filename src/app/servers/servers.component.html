@@ -1,8 +1,13 @@
 <label for="">Server name</label>
-<!-- (input): ascoltiamo evento DOM fornito dall'elemento input | ($event): mediante questo nome di variabile "riservato" (nel template quando si usa l'event binding),passiamo (catturiamo) l'evento (oggetto) al metodo invocato (ad ogni evento, in questo caso pressione di tasto nel campo input) onUpdateServerName(). NB. $event funzionerà solamente se inserito tra le "" -->
-<!-- Per riassumere: ($event) è parola riservata che ci da accesso ai dati dell'evento -->
-<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+<!-- 31.Passing and Using Data with Event Binding -->
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" /> -->
+
+<!-- 33.Two Way Databinding: use [(ngModel)]="" to update property "serverName"; furthermore, if I change the "serverName" property (runtime) the input name also changes (to see that use the above input form)-->
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+
+<!-- 33.Two Way Databinding: by [(ngModel)]="" the property "serverName" is updated below too -->
 <p>{{ serverName }}</p>
+
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
