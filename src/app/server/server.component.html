@@ -1,7 +1,7 @@
-<!-- 39. Styling Elements Dynamically with ngStyle: Usare le "[]" per legarsi alla direttiva. La direttiva si aspetta di ricevere un oggetto-->
-<p [ngStyle]="{ backgroundColor: getColor() }">
-
-  <!-- Server with ID {{ serverId }} is: {{ getServerStatus() }}. -->
-  <!-- 39. Styling Elements Dynamically with ngStyle: L'elemento sopra è stato commentato per evidenziare la sintassi del databinding; è possibile inserire una stringa all'interno di {{ }} inserendo quest'ultima tra apici, inoltre è possibile anche concatenare -->
+<!-- 40. Applying CSS Classes Dynamically with ngClass -->
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: serverStatus === 'online' }"
+>
   {{ "Server with ID " + serverId }} is: {{ getServerStatus() }}
 </p>
