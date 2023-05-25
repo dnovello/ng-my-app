@@ -8,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
-  serverName = 'Init Server Name';
+  //34. Combining all forms of Databinding: clear default value
+  serverName = '';
 
   constructor() {
     setTimeout(() => (this.allowNewServer = true), 2000);
   }
   ngOnInit() {}
 
+  //34. Combining all forms of Databinding: concatenate with serverName value come from "[(ngModel)]" template directive.
   onCreateServer() {
-    this.serverCreationStatus = 'Server created!!';
+    this.serverCreationStatus =
+      'Server created! The name is: ' + this.serverName;
   }
   //31.Passing and Using Data with Event Binding
   onUpdateServerName(event: Event) {
