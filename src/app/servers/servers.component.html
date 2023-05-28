@@ -23,5 +23,17 @@
 <app-server></app-server> -->
 <app-server *ngFor="let server of servers"></app-server>
 
+<hr />
 
-  
+<!-- 42. Challenge -->
+<button class="btn btn-primary" (click)="action()">Display details</button>
+<p *ngIf="toggleIsTrue">Password</p>
+<hr />
+<div
+  *ngFor="let list of timestampEntries"
+  [ngStyle]="{ backgroundColor: list >= 5 ? 'blue' : 'yellow' }"
+  [ngClass]="{ whiteText: list >= 5 }"
+>
+  {{ list }}
+  <div></div>
+</div>

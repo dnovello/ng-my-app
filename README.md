@@ -29,3 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Footer info
 
 
+## Challenge
+
+1. Add a button which says: 'Display Details'
