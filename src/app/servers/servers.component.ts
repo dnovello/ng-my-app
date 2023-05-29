@@ -19,7 +19,8 @@ export class ServersComponent implements OnInit {
   serverCreated = false;
   //41. Outputting Lists with ngFor
   servers = [];
-  //42. Challenge
+
+  //42.Alt Challenge -> *ngFor full syntax <li *ngFor="let item of items; index as i; trackBy: trackByFn">...</li>
   toggleIsTrue = false;
   timestampEntries: Array<number> = [];
 
@@ -38,11 +39,11 @@ export class ServersComponent implements OnInit {
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
-  //42. Challenge
 
+  //42.Alt Challenge -> *ngFor full syntax <li *ngFor="let item of items; index as i; trackBy: trackByFn">...</li>
   action() {
     this.toggleIsTrue = !this.toggleIsTrue;
-    //
-    this.timestampEntries.push(this.timestampEntries.length + 1);
+    this.timestampEntries.push(Date.now());
+    console.log(this.timestampEntries);
   }
 }

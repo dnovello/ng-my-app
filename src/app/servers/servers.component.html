@@ -25,15 +25,13 @@
 
 <hr />
 
-<!-- 42. Challenge -->
-<button class="btn btn-primary" (click)="action()">Display details</button>
-<p *ngIf="toggleIsTrue">Password</p>
-<hr />
+<!-- 42.Alt Challenge -> *ngFor full syntax <li *ngFor="let item of items; index as i; trackBy: trackByFn">...</li> -->
+<button class="btn btn-primary" (click)="action()">Show Details</button>
+<p *ngIf="toggleIsTrue">Secret...</p>
 <div
-  *ngFor="let list of timestampEntries"
-  [ngStyle]="{ backgroundColor: list >= 5 ? 'blue' : 'yellow' }"
-  [ngClass]="{ whiteText: list >= 5 }"
+  *ngFor="let timestamp of timestampEntries; index as i"
+  [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : 'yellow' }"
+  [ngClass]="{ whiteText: i >= 5 }"
 >
-  {{ list }}
-  <div></div>
+  {{ timestamp }}
 </div>
