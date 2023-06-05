@@ -4,6 +4,22 @@
       <h3>Hard coding from: AppComponent...</h3>
       <hr />
       <app-servers></app-servers>
+
+      <button (click)="onToggleDisplay()" class="btn btn-primary">
+        Display details
+      </button>
+      <p *ngIf="showSecret">Secret psw = 123</p>
+      <div
+        *ngFor="let logItem of log"
+        [ngStyle]="
+          logItem >= 5
+            ? { 'background-color': 'blue' }
+            : { 'background-color': 'transparent' }
+        "
+        [ngClass]="logItem >= 5 ? 'white' : ''"
+      >
+        {{ logItem }}
+      </div>
     </div>
   </div>
 </div>
