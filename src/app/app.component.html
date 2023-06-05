@@ -10,16 +10,16 @@
       </button>
       <p *ngIf="showSecret">Secret psw = 123</p>
       <div
-        *ngFor="let logItem of log"
+        *ngFor="let logItem of log; let i = index"
         [ngStyle]="
-          logItem >= 5
+          i >= 4
             ? { 'background-color': 'blue' }
             : { 'background-color': 'transparent' }
         "
-        [ngClass]="logItem >= 5 ? 'white' : ''"
+        [ngClass]="i >= 4 ? 'white' : ''"
       >
         {{ logItem }}
-      </div>
+      </div> <!-- Aggiunto a *ngFor l'estrapolazione dell'indice ("let i = index" oppure usare la sintassi "index as i") per effettuare check: "i >= 5" anzichè "logItem >= 5" il quale darebbe come valore sempre true in quanto la "string" è sempre maggiore di 5, mentre se fosse "number" il controllo sarebbe attendibile -->
     </div>
   </div>
 </div>
